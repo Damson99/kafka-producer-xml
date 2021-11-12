@@ -12,7 +12,11 @@ spring:
         streams:
           binder:
             brokers: localhost:9092
-            configuration:
+              bindings:
+                xml-input-channel:
+                  consumer:
+                    valueSerde: io.confluent.kafka.streams.serdes.json.KafkaJsonSchemaSerde
+                      dlqName: xml-order-topic-dlq
               schema.registry.url: http://localhost:8081
               processing.guarantee: exactly_once
           bindings:
