@@ -1,0 +1,28 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        xml-input-channel:
+          destination: xml-order-topic
+        poland-orders-channel:
+          destination: poland-orders
+        foreign-orders-channel:
+          destination: foreign-orders
+      kafka:
+        streams:
+          binder:
+            brokers: localhost:9092
+            configuration:
+              schema.registry.url: http://localhost:8081
+              processing.guarantee: exactly_once
+          bindings:
+            poland-orders-channel:
+              producer:
+                valueSerde: io.confluent.kafka.streams.serdes.json.KafkaJsonSchemaSerde
+            foreign-orders-channel:
+              producer:
+                valueSerde: io.confluent.kafka.streams.serdes.json.KafkaJsonSchemaSerde
+
+application:
+  configs:
+    topic.name.error: error-topic

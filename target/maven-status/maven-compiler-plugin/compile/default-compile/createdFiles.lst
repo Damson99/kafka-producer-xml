@@ -1,0 +1,13 @@
+com/cloud/kafkaproducerxml/binder/OrderListenerBinding.class
+com/cloud/kafkaproducerxml/model/v1/Order.class
+com/cloud/kafkaproducerxml/config/constant/Constants.class
+com/cloud/kafkaproducerxml/KafkaProducerXmlApplication.class
+com/cloud/kafkaproducerxml/model/v1/Order$Item.class
+com/cloud/kafkaproducerxml/service/OrderListenerService.class
+com/cloud/kafkaproducerxml/web/model/v1/ProcessedOrder$ProcessedOrderBuilder.class
+com/cloud/kafkaproducerxml/config/serde/ProcessedOrderSerde.class
+com/cloud/kafkaproducerxml/web/model/v1/ProcessedOrder.class
+com/cloud/kafkaproducerxml/web/model/v1/OrderTagEnum.class
+com/cloud/kafkaproducerxml/web/model/v1/CountryEnum.class
+com/cloud/kafkaproducerxml/model/v1/Order$ShipTo.class
+com/cloud/kafkaproducerxml/model/v1/ObjectFactory.class
